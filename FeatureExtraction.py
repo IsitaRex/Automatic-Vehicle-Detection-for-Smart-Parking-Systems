@@ -84,7 +84,3 @@ model1 = models.vgg16(pretrained=True)
 model2 = models.alexnet(pretrained=True)
 featureExtraction(model1, 'Image_featuresVGG16')
 featureExtraction(model2, 'Image_featuresAlexNet')
-
-# infile = open('Image_featuresVGG162.pckl','rb')
-# features = pickle.load(infile)
-# infile.close()
