@@ -10,7 +10,7 @@ The images were taken with a drone from different perspectives and then cropped 
 Since working with raw pixels has proved not to be optimal for image classification problems, we decided to explore two different feature extraction method looking to improve our generalization task. The first one is separating the feature extraction part from a VGG16 from the multilayer perceptron and using this flattened features as one feature set. On the other hand, the other technique is extracting the histogram of oriented gradients (HoG) from our data, which is widely used in for object detection purposes and our problem can be translated into detecting a car inside a parking space or not.
 
 * [Feature Extraction with VGG16](https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/FeatureExtraction.py)
-* [HoG Extraction] (https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/HogExtraction.py)
+* [HoG Extraction](https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/HogExtraction.py)
 
 The code of feature extraction with VGG16 was based on:  https://towardsdatascience.com/image-feature-extraction-using-pytorch-e3b327c3607a
 
