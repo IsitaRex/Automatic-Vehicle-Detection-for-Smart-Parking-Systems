@@ -7,9 +7,12 @@ We built our own data set available at: https://1drv.ms/u/s!Ar7c_geveKL2koApDpxA
 The images were taken with a drone from different perspectives and then cropped in order to buil a single parking space data-set. Two classes can be found: empty parking spaces and occupied ones. Additionally, seeking to increase the data-set we performed data augmentation techniques by rotating the image, flipping it and applying both transformations. Finally we obtained 1166 images of the empty class and 1088 occupied cells, for a total of 2254 images.
 
 ## Feature Extraction
-Since working with raw pixels has proved not to be optimal for image classification problems, we decided to explore two different feature extraction method looking to improve our generalization task. The first one is separating the feature extraction part from a VGG16 from the multilayer perceptron and using this flattened features as one feature set. On the other hand, the other technique is extracting the histogram of oriented gradients from our data, which is widely used in for object detection purposes and our problem can be translated into detecting a car inside a parking space or not.
+Since working with raw pixels has proved not to be optimal for image classification problems, we decided to explore two different feature extraction method looking to improve our generalization task. The first one is separating the feature extraction part from a VGG16 from the multilayer perceptron and using this flattened features as one feature set. On the other hand, the other technique is extracting the histogram of oriented gradients (HoG) from our data, which is widely used in for object detection purposes and our problem can be translated into detecting a car inside a parking space or not.
 
-* [Feature Extraction with VGG16](https://towardsdatascience.com/image-feature-extraction-using-pytorch-e3b327c3607a)
+* [Feature Extraction with VGG16](https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/FeatureExtraction.py)
+* [HoG Extraction] (https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/HogExtraction.py)
+
+The code of feature extraction with VGG16 was based on:  https://towardsdatascience.com/image-feature-extraction-using-pytorch-e3b327c3607a
 
 ## Notebooks
 There is a notebook for each feature set (raw pixels, VGG16 and HoG) showing the classification results and the confusion matrices for each classifier. In order to validate the results we split the data into 80% training and 20% testing and 5-fold crossvalidation. Additionally, looking for lower complexity in our models we applied the Barnes hut-tsne as dimensionality technique to measure the performance in lower dimensions.
@@ -19,3 +22,8 @@ Classifiers used:
 * SVM (linear, polynomial and radial base)
 * Random Forest
 * Gradient Boosting
+
+Notebooks Available:
+* [Classiciation with Raw Pixels](https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/Classification_RawData.ipynb)
+* [Classification with VGG16 featues](https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/ClassificationVGG16.ipynb)
+* [Classification with HoG](https://github.com/iurregog/Automatic-Vehicle-Detection-for-Smart-Parking-Systems/blob/main/ClassificationHoG.ipynb)
