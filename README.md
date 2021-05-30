@@ -3,6 +3,7 @@ The general objective of this project is to answer the question: Is it possible 
 
 ## Data-Set
 We built our own data set available at: https://1drv.ms/u/s!Ar7c_geveKL2koApDpxAVhYsQlF99g?e=vtnh0u
+
 The images were taken with a drone from different perspectives and then cropped in order to buil a single parking space data-set. Two classes can be found: empty parking spaces and occupied ones. Additionally, seeking to increase the data-set we performed data augmentation techniques by rotating the image, flipping it and applying both transformations. Finally we obtained 1166 images of the empty class and 1088 occupied cells, for a total of 2254 images.
 
 ## Feature Extraction
